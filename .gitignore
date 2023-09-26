@@ -1,0 +1,7 @@
+includes/config.php
+saved/*
+admin/backup/*
+classes/*orig.php
+menus/*orig.php
+polls/*
+squares/*
