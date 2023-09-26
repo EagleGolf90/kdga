@@ -17,7 +17,7 @@
           <a class="nav-link dropdown-toggle dropdown-header" href="#" role="button" data-bs-toggle="dropdown">Manage Players</a>
           <ul class="dropdown-menu">
             <li><a class="nav-link" href="https://kdga.org/kdga/admin/addContacts.php">Add Contacts</a></li>
-            <li><a class="nav-link" href="https://kdga.org/kdga/admin/addParticipants.php">Add Participants</a></li>
+            <li><a class="nav-link" href="https://kdga.org/kdga/scores/which_round.php?page=admin/addParticipants.php">Add Participants</a></li>
             <li><a class="nav-link" href="https://kdga.org/kdga/scores/which_round.php?page=admin/addPairings.php">Add Pairings</a></li>
           </ul>
         </li>

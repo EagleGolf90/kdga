@@ -86,8 +86,8 @@ class GolfScores {
   public function getSkinsParticipants() { return $this->sqlTable->load('loadSkinsParticipants', array()); }
   public function displaySkinsParticipants() { return $this->sqlTable->load('displaySkinsParticipants', array()); }
 
-  public function getParticipants() { return $this->sqlTable->load('loadParticipants', array()); }
-  public function displayParticipants() { return $this->sqlTable->load('displayParticipants', array()); }
+  public function getParticipants($roundPlayed) { return $this->sqlTable->load('loadParticipants', array($roundPlayed)); }
+  public function displayParticipants($roundPlayed) { return $this->sqlTable->load('displayParticipants', array($roundPlayed)); }
 
   public function displayContacts() { return $this->sqlTable->load('displayContacts', array()); }
 
@@ -152,19 +152,11 @@ class GolfScores {
     return $link;
   }
 
-  public function addParticipants()
-  {
-    $this->addParticipantsRound(1);
-    if ($_POST['player_choice'] == '2') $this->addParticipantsRound(2);
-    $ret = $this->sqlTable->execute('addPlayersChoice', array($_POST['playerID'], $_POST['player_choice']));
-  }
+  public function addParticipants() { $this->addParticipantsRound(1); }
+  public function deleteParticipants($playerID) { $this->sqlTable->execute('deleteParticipant', array($playerID)); }
 
-  public function deleteParticipants($playerID) {
-    $this->sqlTable->execute('deleteParticipant', array($playerID));
-    $this->sqlTable->execute('deletePlayersChoice', array($playerID));
-  }
-
-  public function addPairings() { $ret = $this->sqlTable->execute('addPairings', array($_POST['roundPlayed'], 1, strtoupper($_POST['groupID']), $_POST['playerID'])); }
+  private function getTeeTimes() { return '10:00 AM'; }
+  public function addPairings() { $ret = $this->sqlTable->execute('addPairings', array($_POST['roundPlayed'], 1, strtoupper($_POST['groupID']), $this->getTeeTimes(), $_POST['playerID'])); }
   public function deletePairings($roundPlayed, $group) { return $this->sqlTable->execute('deletePairings', array($roundPlayed, $group)); }
 
   private function countPlayers() {
