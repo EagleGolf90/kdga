@@ -15,11 +15,11 @@ switch (strtolower($_GET['page'])) {
     break;
   case 'participants':
     $golf->deleteParticipants($_GET['id']);
-    $location .= 'addParticipants.php';
+    $location .= 'addParticipants.php?roundPlayed=' . $_GET['roundPlayed'];
     break;
   case 'pairings':
-    $golf->deletePairings($_GET['round'], $_GET['group']);
-    $location .= 'addPairings.php?roundPlayed=' . $_GET['round'];
+    $golf->deletePairings($_GET['roundPlayed'], $_GET['group']);
+    $location .= 'addPairings.php?roundPlayed=' . $_GET['roundPlayed'];
     break;
   case 'skins':
     $golf->deleteSkins($_GET['round'], $_GET['id']);

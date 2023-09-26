@@ -6,13 +6,13 @@ $count = 0;
 $oldGroupID = '';
 foreach ($players_row as $display) {
   if ($oldGroupID != $display['GroupID']) {
-    $delete_link = 'delete.php?page=pairings&round=' . $roundPlayed . '&group=' . $display['GroupID'];
+    $delete_link = 'delete.php?page=pairings&roundPlayed=' . $roundPlayed . '&group=' . $display['GroupID'];
 ?>
         <tr class="pairing_header"><td>Group <?php echo $display['GroupID']; ?></td><td style="text-align: right"><a href="<?php echo $delete_link; ?>">Delete</a></td></tr>
 <?php
   }
 ?>
-        <tr><td><?php echo $display['Organization']; ?></td><td><?php echo $display['LastName'] . ', ' . $display['FirstName']; ?></td></tr>
+        <tr><td colspan="2"><?php echo $display['LastName'] . ', ' . $display['FirstName']; ?></td></tr>
 <?php
   $oldGroupID = $display['GroupID'];
   $count += 1;

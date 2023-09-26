@@ -49,7 +49,7 @@ for ($x = 0; $x < $groupSize; $x++) {
 <?php
 foreach ($pairings as $pairing) {
 ?>
-            <option value="<?php echo $pairing['PlayerID']; ?>"><?php echo $pairing['LastName'] . ', ' . $pairing['FirstName'] . ' (' . $pairing['Organization'] . ')'; ?></option>
+            <option value="<?php echo $pairing['PlayerID']; ?>"><?php echo $pairing['LastName'] . ', ' . $pairing['FirstName']; ?></option>
 <?php
 }
 ?>

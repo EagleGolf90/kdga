@@ -1,8 +1,8 @@
 <?php
 include('../preload.php');
 include(INCLUDES . 'initialize_golf.php');
-$participants = $golf->getParticipants();
-$players_row = $golf->displayParticipants();
+$participants = $golf->getParticipants($_GET['roundPlayed']);
+$players_row = $golf->displayParticipants($_GET['roundPlayed']);
 
 include(HTML . 'beginHTML.php');
 include(MENUS . 'navbar.php');
@@ -10,6 +10,7 @@ include(MENUS . 'navbar.php');
 
 <form class="regForm" action="add.php" method="post">
   <input type="text" name="page" value="participants" hidden>
+  <input type="text" name="roundPlayed" value="<?php echo $_GET['roundPlayed']; ?>" hidden>
   <div class="container-list">
     <?php
     $display_message = '<h3>Add Participant</h3>';
@@ -23,7 +24,7 @@ include(MENUS . 'navbar.php');
             <option value="" selected>Select one</option>
 <?php
 foreach ($participants as $participant) {
-  $name_value = $participant['LastName'] . ', ' . $participant['FirstName'] . ' (' . $participant['Organization'] . ')';
+  $name_value = $participant['LastName'] . ', ' . $participant['FirstName'];
 ?>
             <option value="<?php echo $participant['PlayerID']; ?>"><?php echo $name_value; ?></option>
 <?php
@@ -35,10 +36,7 @@ foreach ($participants as $participant) {
       </div>
     </div>
 
-    <?php
-    //include(INCLUDES . 'select_events.php');
-    include(INCLUDES . 'submit_button.php');
-    ?>
+    <?php include(INCLUDES . 'submit_button.php'); ?>
 
     <hr/>
 
