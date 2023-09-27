@@ -15,5 +15,11 @@
   .container-list { width: 700px; margin-left: 25%; }
   tr.pairing_header { background-color: #ff8000; font-weight: bold; }
   .dropdown-header { width: 200px; }
+  <?php if (PAGE_NAME == 'enterScores.php') { ?>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  <?php } ?>
   </style>
   <link href="../html/css/css-styles.css" rel="stylesheet">

@@ -32,7 +32,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle dropdown-header" href="#" role="button" data-bs-toggle="dropdown">Manage Skins</a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="https://kdga.org/kdga/admin/manageSkins.php">Skins Participants</a></li>
+            <li><a class="nav-link" href="https://kdga.org/kdga/scores/which_round.php?page=admin/manageSkins.php">Skins Participants</a></li>
             <li><a class="nav-link" href="https://kdga.org/kdga/scores/which_round.php?page=admin/skins.php">Display Skins</a></li>
           </ul>
         </li>

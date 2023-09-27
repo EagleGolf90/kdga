@@ -10,7 +10,7 @@ include(MENUS . 'navbar.php');
 
 <div class="container-fluid">
   <?php
-  $display_message = '<h2>IDGA All Scores<h2>';
+  $display_message = '<h2>KDGA All Scores<h2>';
   include(INCLUDES . 'display_message.php');
   ?>
 

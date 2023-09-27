@@ -83,7 +83,7 @@ class GolfScores {
     return $this->players;
   }
 
-  public function getSkinsParticipants() { return $this->sqlTable->load('loadSkinsParticipants', array()); }
+  public function getSkinsParticipants($roundPlayed) { return $this->sqlTable->load('loadSkinsParticipants', array($roundPlayed)); }
   public function displaySkinsParticipants() { return $this->sqlTable->load('displaySkinsParticipants', array()); }
 
   public function getParticipants($roundPlayed) { return $this->sqlTable->load('loadParticipants', array($roundPlayed)); }

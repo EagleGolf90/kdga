@@ -9,31 +9,7 @@ include(MENUS . 'navbar.php');
 ?>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h1><?php echo $courseInfo[0][1]; ?></h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h2><?php echo $date_played; ?></h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h3><?php echo $courseInfo[0][3] . ', ' . $courseInfo[0][4]; ?></h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h4>Course Rating: <?php echo $courseInfo[0][5]; ?></h4>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h4>Slope Rating: <?php echo $courseInfo[0][6]; ?></h4>
-    </div>
-  </div>
+  <?php include(INCLUDES . 'course_header.php'); ?>
   <hr/>
 
 <?php

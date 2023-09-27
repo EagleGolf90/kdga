@@ -12,9 +12,9 @@ if (!method_exists($object, $methodName)) die('Something isn\'t working. Please 
 
 $object->$methodName();
 
+$object = null;
+
 if (strtolower($_POST['page']) == 'scores') echo '<h2><a href="' . $location . '">Return to Scores</a></h2>' . "\n";
 header("Location: " . $location);
 exit;
-
-$object = null;
 ?>

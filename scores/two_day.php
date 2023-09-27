@@ -35,8 +35,7 @@ if ($role == 'user') {
     <tr>
       <td class="col text-center header">Place</td>
       <td class="col-md-2 text-center header">Name</td>
-      <td class="col text-center header">Rnd 1</td>
-      <td class="col text-center header">Rnd 2</td>
+      <td class="col text-center header">Score</td>
       <td class="col text-center header">Total</td>
     </tr>
 
@@ -56,7 +55,6 @@ foreach ($rows as $row) {
       <td class="col text-center"><?php echo $place; ?></td>
       <td class="col-md-2"><?php echo $row['LastName'] . ', ' . $row['FirstName']; ?></td>
       <td class="col text-center"><?php echo $row['R1']; ?></td>
-      <td class="col text-center"><?php echo $row['R2']; ?></td>
       <td class="col text-center"><?php echo $row['TotalScore']; ?></td>
     </tr>
 <?php
