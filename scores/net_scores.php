@@ -29,7 +29,6 @@ if ($role == 'user') {
     <tr>
       <td class="col text-center header">Place</td>
       <td class="col-md-2 text-center header">Name</td>
-      <td class="col text-center header">Score</td>
       <td class="col text-center header">Total</td>
       <td class="col text-center header">HCP</td>
       <td class="col text-center header">Net</td>
@@ -50,7 +49,6 @@ foreach ($rows as $row) {
     <tr>
       <td class="col text-center"><?php echo $place; ?></td>
       <td class="col-md-2"><?php echo $row['LastName'] . ', ' . $row['FirstName']; ?></td>
-      <td class="col text-center"><?php echo $row['R1']; ?></td>
       <td class="col text-center"><?php echo $row['TotalScore']; ?></td>
       <td class="col text-center"><?php echo $row['handicap']; ?></td>
       <td class="col text-center"><?php echo $row['NetScore']; ?></td>

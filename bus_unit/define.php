@@ -6,7 +6,7 @@
  * Description.: This program is to point a database to be updated.
  */
 define('TEST_FLAG', false);
-define('DEBUG_FLAG', true);
+define('DEBUG_FLAG', false);
 define('ADMIN', 'True');
 define('PROGRAM_TYPE', 'MVC');
 ?>

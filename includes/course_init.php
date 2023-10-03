@@ -1,10 +1,10 @@
 <?php
 if (PAGE_NAME != 'which_page.php') {
   $roundPlayed = 0;
-  if (PAGE_NAME == 'enterScores.php' || PAGE_NAME == 'leaderboard.php') {
+  if (PAGE_NAME == 'enterScores.php') {
     $roundPlayed = $_GET['round'];
   } else {
-    if (PAGE_NAME != 'two_day.php' && PAGE_NAME != 'net_scores.php') {
+    if (PAGE_NAME != 'two_day.php' && PAGE_NAME != 'net_scores.php' || PAGE_NAME == 'leaderboard.php') {
       $roundPlayed = $_GET['roundPlayed'];
     }
   }

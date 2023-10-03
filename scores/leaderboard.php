@@ -5,7 +5,7 @@ $role = strtolower($_GET['role']);
 include('../preload.php');
 include(INCLUDES . 'initialize_golf.php');
 include(INCLUDES . 'course_init.php');
-$rows = $golf->getTwoDayLeaderboard($roundPLayed);
+$rows = $golf->getTwoDayLeaderboard($roundPlayed);
 
 include(HTML . 'beginHTML.php');
 if ($role == 'admin') include(MENUS . 'navbar.php');
@@ -35,7 +35,6 @@ if ($role == 'user') {
     <tr>
       <td class="col text-center header">Place</td>
       <td class="col-md-2 text-center header">Name</td>
-      <td class="col text-center header">Score</td>
       <td class="col text-center header">Total</td>
     </tr>
 
@@ -54,7 +53,6 @@ foreach ($rows as $row) {
     <tr>
       <td class="col text-center"><?php echo $place; ?></td>
       <td class="col-md-2"><?php echo $row['LastName'] . ', ' . $row['FirstName']; ?></td>
-      <td class="col text-center"><?php echo $row['R1']; ?></td>
       <td class="col text-center"><?php echo $row['TotalScore']; ?></td>
     </tr>
 <?php
