@@ -5,7 +5,7 @@ $role = strtolower($_GET['role']);
 include('../preload.php');
 include(INCLUDES . 'initialize_golf.php');
 include(INCLUDES . 'course_init.php');
-$rows = $golf->loadNetScoreLeaderboard();
+$rows = $golf->loadNetScoreLeaderboard($roundPlayed);
 
 include(HTML . 'beginHTML.php');
 if ($role == 'admin') include(MENUS . 'navbar.php');

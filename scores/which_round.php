@@ -11,6 +11,8 @@ include(MENUS . 'navbar.php');
 ?>
 
 <form method="get" action="<?php echo $script_file; ?>" name="skinsForm">
+  <input type="text" name="page" value="<?php echo $_GET['page']; ?>" hidden>
+  <input type="text" name="role" value="<?php echo $_GET['role']; ?>" hidden>
 <div class="container">
   <?php
   $display_message = '<h1>KDGA</h1>';

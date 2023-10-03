@@ -23,7 +23,7 @@ switch (strtolower($_GET['page'])) {
     break;
   case 'skins':
     $golf->deleteSkins($_GET['round'], $_GET['id']);
-    $location .= 'manageSkins.php';
+    $location .= 'manageSkins.php?roundPlayed=' . $_GET['round'];
     break;
 }
 $golf = null;
