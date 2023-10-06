@@ -5,7 +5,7 @@ include(MENUS . 'navbar.php');
 ?>
 
 <div class="container">
-  <h2>Tri-State Cup / IDGA Two-Day Tournament</h2>
+  <h2>KDGA Tournament</h2>
 </div>
 
 <?php include(HTML . 'endHTML.php'); ?>
