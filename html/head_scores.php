@@ -2,8 +2,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <link href="../html/css/wizard-style.css" rel="stylesheet">
+
   <!-- Custom styles -->
   <style>
   th.scores, td.scores, input.holes { text-align: center; }
@@ -15,11 +14,11 @@
   .container-list { width: 700px; margin-left: 25%; }
   tr.pairing_header { background-color: #ff8000; font-weight: bold; }
   .dropdown-header { width: 200px; }
-  <?php if (PAGE_NAME == 'enterScores.php') { ?>
+<?php if (PAGE_NAME == 'enterScores.php') { ?>
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
-  <?php } ?>
+<?php } ?>
   </style>
   <link href="../html/css/css-styles.css" rel="stylesheet">

@@ -10,7 +10,7 @@ ul {
 
 li { float: left; }
 
-li a, .dropbtn {
+li a, .dropbutton {
   display: inline-block;
   color: white;
   text-align: center;
@@ -18,7 +18,7 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn { background-color: red; }
+li a:hover, .dropdown:hover .dropbutton { background-color: red; }
 li.dropdown { display: inline-block; }
 
 .dropdown-content {
