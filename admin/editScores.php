@@ -9,7 +9,7 @@ include(MENUS . 'navbar.php');
 ?>
 
 <form class="regForm" action="add.php" method="post">
-<div class="container">
+<div class="container-fluid">
   <input type="text" name="page" value="edit_scores" hidden>
   <input type="text" name="roundPlayed" value="<?php echo $roundPlayed; ?>" hidden>
   <input type="text" name="roundID" value="<?php echo $roundID; ?>" hidden>
