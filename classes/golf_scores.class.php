@@ -134,10 +134,7 @@ class GolfScores {
   public function deleteSkins($roundPlayed, $playerID) { $this->sqlTable->execute('deleteSkinsParticipants', array($roundPlayed, $playerID)); }
 
   private function addParticipantsRound($roundID) {
-    $rows = $this->sqlTable->load('selectRoundPlayed', array($roundID));
-    $roundPlayed = 1;
-    foreach ($rows as $row) $roundPlayed = $row['RoundPlayed'];
-    $ret = $this->sqlTable->execute('addParticipants', array($roundPlayed, $_POST['playerID']));
+    $ret = $this->sqlTable->execute('addParticipants', array($_POST['roundPlayed'], $_POST['playerID']));
   }
 
   public function getRedirectLink($name, $roundPlayed) {
