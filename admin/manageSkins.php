@@ -59,7 +59,7 @@ $total_paid = 0;
 $total_unpaid = 0;
 foreach ($players_row as $display) {
   $name_value = $display['LastName'] . ', ' . $display['FirstName'];
-  $delete_link = 'delete.php?page=skins&round=' . $display['RoundPlayed'] . '&id=' . $display['PlayerID'];
+  $delete_link = 'delete.php?page=skins&round=' . $_GET['roundPlayed'] . '&id=' . $display['PlayerID'];
 ?>
         <tr>
           <td><?php echo $name_value; ?></td>

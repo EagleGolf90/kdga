@@ -2,7 +2,7 @@
 include('../preload.php');
 include(INCLUDES . 'initialize_golf.php');
 include(INCLUDES . 'course_init.php');
-$skins = $golf->checkSkins($roundPlayed);
+$skins = $golf->checkSkins($_GET['roundPlayed']);
 
 include(HTML . 'beginHTML.php');
 include(MENUS . 'navbar.php');
