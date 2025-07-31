@@ -1,7 +1,7 @@
 <?php
 include('../preload.php');
 include(INCLUDES . 'initialize_golf.php');
-$contacts_row = $golf->displayContacts();
+// $contacts_row = $golf->displayContacts();
 
 include(HTML . 'beginHTML.php');
 include(MENUS . 'navbar.php');

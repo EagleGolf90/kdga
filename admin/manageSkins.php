@@ -1,9 +1,9 @@
 <?php
 include('../preload.php');
 include(INCLUDES . 'initialize_golf.php');
-$rows = $golf->loadRoundPlayed();
+$rows = $golf->loadRoundPlayed($_GET['roundPlayed']);
 $participants = $golf->getSkinsParticipants($_GET['roundPlayed']);
-$players_row = $golf->displaySkinsParticipants();
+$players_row = $golf->displaySkinsParticipants($_GET['roundPlayed']);
 
 include(HTML . 'beginHTML.php');
 include(MENUS . 'navbar.php');

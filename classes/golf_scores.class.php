@@ -38,7 +38,7 @@ class GolfScores {
     return $this->courseDetails;
   }
 
-  public function loadRoundPlayed() { return $this->sqlTable->load('loadRoundPlayed', array()); }
+  public function loadRoundPlayed($roundPlayed) { return $this->sqlTable->load('loadRoundPlayed', array($roundPlayed)); }
 
   public function getRoundPlayed($round) {
     if ($round == 0) {
@@ -84,12 +84,12 @@ class GolfScores {
   }
 
   public function getSkinsParticipants($roundPlayed) { return $this->sqlTable->load('loadSkinsParticipants', array($roundPlayed)); }
-  public function displaySkinsParticipants() { return $this->sqlTable->load('displaySkinsParticipants', array()); }
+  public function displaySkinsParticipants($roundPlayed) { return $this->sqlTable->load('displaySkinsParticipants', array($roundPlayed)); }
 
   public function getParticipants($roundPlayed) { return $this->sqlTable->load('loadParticipants', array($roundPlayed)); }
   public function displayParticipants($roundPlayed) { return $this->sqlTable->load('displayParticipants', array($roundPlayed)); }
 
-  public function displayContacts() { return $this->sqlTable->load('displayContacts', array()); }
+  public function displayContacts($org) { return $this->sqlTable->load('displayContacts', array($org)); }
 
   public function getPairings($roundPlayed) { return $this->sqlTable->load('loadPairings', array($roundPlayed)); }
   public function displayPairings($roundPlayed) { return $this->sqlTable->load('displayPairings', array($roundPlayed)); }
