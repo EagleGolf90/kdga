@@ -12,7 +12,7 @@ $count = 0;
 for ($i = 0; $i < 3; $i++) {
 ?>
       <div id="tabs-<?php echo ($i + 1); ?>">
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-success">
           <thead>
             <tr>
               <th>Name</th>
@@ -35,7 +35,7 @@ for ($i = 0; $i < 3; $i++) {
     $count += 1;
   }
 ?>
-        <tr><td colspan="2"><b>Total: <?php echo $count; ?></b></td></tr>
+        <tr><td colspan="3"><b>Total: <?php echo $count; ?></b></td></tr>
         </table>
       </div>
 <?php
